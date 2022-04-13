@@ -54,12 +54,12 @@ test(get_list_counts) :-
 
 :- end_tests(get_list_counts).
 
-%! get_list_slice(+Items, +Offset, +Length, -Slice)
+%! get_list_slice(+Items, +Offset, +Length, -Slice) is det.
 % Get a slice of a list.
 get_list_slice(Items, Offset, Length, Slice) :-
     get_list_slice(Items, Offset, Length, _, Slice, _).
 
-%! get_list_slice(+Items, +Offset, +Length, -Prefix, -Slice, -Suffix)
+%! get_list_slice(+Items, +Offset, +Length, -Prefix, -Slice, -Suffix) is det.
 % Get a slice of a list including the prefix and suffix.
 get_list_slice(Items, Offset, Length, Prefix, Slice, Suffix) :-
     Length >= 0,
